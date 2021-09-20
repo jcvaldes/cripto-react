@@ -18,9 +18,9 @@ jobs:
       - name: install packages
         run: npm install
       - name: registry github user
-        run: /
-          git config --global user.email jcvaldes.ingenieria@gmail.com
-          git config --global user.name Juan Carlos Valdés
+        run:
+          - git config --global user.email jcvaldes.ingenieria@gmail.com
+          - git config --global user.name Juan Carlos Valdés
       - name: deploy the app
         run: npm run deploy
         env:
