@@ -18,3 +18,9 @@ https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC&tsyms=USD,EUR
 # Spinner
 
 https://tobiasahlin.com/spinkit/
+
+# deploy 
+
+```
+npm i -D gh-pages
+```
