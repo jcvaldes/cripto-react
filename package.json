@@ -2,6 +2,7 @@
   "name": "cripto-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jcvaldes.github.io/cripto-react",
   "dependencies": {
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.4.1",
