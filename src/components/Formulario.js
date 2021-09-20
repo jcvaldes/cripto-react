@@ -21,7 +21,7 @@ const Boton = styled.input`
     cursor: pointer;
   }
 `;
-const Formulario = () => {
+const Formulario = ({ saveMoneda, saveCriptomoneda }) => {
   // state del listado de criptomonedas
   const [listaCripto, saveCripto] = useState([]);
   const [error, saveError] = useState(false);
@@ -47,7 +47,7 @@ const Formulario = () => {
       const url =
         "https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=USD";
       const resultado = await axios.get(url);
-    //   console.log(resultado.data.Data);
+      //   console.log(resultado.data.Data);
       saveCripto(resultado.data.Data);
     };
     consultarAPI();
@@ -64,7 +64,10 @@ const Formulario = () => {
     }
     // pasar la informacion al componente principal
     saveError(false);
-  }
+    
+    saveMoneda(moneda);
+    saveCriptomoneda(criptomoneda);
+  };
   return (
     <form onSubmit={cotizarMoneda}>
       {error ? <Error mensaje="todos los campos son obligatorios" /> : null}
